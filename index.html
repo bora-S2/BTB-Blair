@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- BTB Frontend v0.6 · Reader + internal starting article + real Agent recommendation links -->
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BREAKING THE BUBBLE</title>
 <style>
@@ -14,7 +15,7 @@
 .section-head{display:flex;justify-content:space-between;align-items:end;padding:48px 0 22px}.section-head h2{margin:0;font-size:28px;letter-spacing:-.03em}.section-head p{margin:0;color:var(--muted);font-size:12px}.news-grid{display:grid;grid-template-columns:1.3fr .85fr .85fr;gap:1px;background:var(--line);border:1px solid var(--line)}.news{background:var(--paper);padding:28px;min-height:310px;cursor:pointer;transition:.25s}.news:hover{background:#fff}.news.feature{min-height:430px;display:flex;flex-direction:column;justify-content:space-between}.tag{font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:700}.news h3{font-family:"Playfair Display",serif;font-size:29px;line-height:1.15;font-weight:500;margin:22px 0 16px}.news.small h3{font-size:21px}.news p{font-size:13px;line-height:1.65;color:#666c75;margin:0}.meta{display:flex;justify-content:space-between;font-size:10px;color:#8a8f97;margin-top:28px;padding-top:16px;border-top:1px solid var(--line)}
 .thesis{margin:82px 0;padding:42px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);display:grid;grid-template-columns:1fr 2fr;gap:40px}.thesis strong{font-size:11px;letter-spacing:.16em}.thesis blockquote{margin:0;font-family:"Playfair Display",serif;font-size:32px;line-height:1.35}.hidden{display:none!important}
 .btb{padding:52px 0 100px}.back{padding:0;color:var(--muted);font-size:12px;margin-bottom:36px}.issue-top{display:grid;grid-template-columns:1.3fr .7fr;gap:60px;padding-bottom:38px;border-bottom:1px solid var(--line)}.issue-top h2{font-family:"Playfair Display",serif;font-weight:500;font-size:48px;line-height:1.05;letter-spacing:-.035em;margin:8px 0 16px}.issue-top p{color:#666c75;line-height:1.7;font-size:14px;max-width:760px}.issue-meta{font-size:11px;color:var(--muted);line-height:2;text-align:right}
-.bubble-grid{display:grid;grid-template-columns:.78fr 1.25fr .78fr;gap:20px;margin-top:34px;align-items:start}.agent-col{display:flex;flex-direction:column;gap:18px}.agent-card{background:#fff;border:1px solid var(--line);padding:22px;position:relative}.agent-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#b8c1cb}.agent-name{font-size:11px;font-weight:700;letter-spacing:.08em}.agent-role{font-size:10px;color:var(--muted);margin-top:4px}.agent-card h4{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;line-height:1.25;margin:18px 0 12px}.agent-card p{font-size:12px;color:#666c75;line-height:1.65;margin:0}.strength{margin-top:16px;font-size:10px;color:#7c828a}.dots{letter-spacing:2px;color:var(--navy)}
+.bubble-grid{display:grid;grid-template-columns:.78fr 1.25fr .78fr;gap:20px;margin-top:34px;align-items:start}.agent-col{display:flex;flex-direction:column;gap:18px}.agent-card{background:#fff;border:1px solid var(--line);padding:22px;position:relative}.agent-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#b8c1cb}.agent-name{font-size:11px;font-weight:700;letter-spacing:.08em}.agent-role{font-size:10px;color:var(--muted);margin-top:4px}.agent-card h4{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;line-height:1.25;margin:18px 0 12px}.agent-card p{font-size:12px;color:#666c75;line-height:1.65;margin:0}
 .center{background:#fff;border:1px solid #cfd4da}.article{padding:34px}.article .source{font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:700}.article h3{font-family:"Playfair Display",serif;font-weight:500;font-size:42px;line-height:1.08;letter-spacing:-.035em;margin:18px 0}.summary{font-size:14px;line-height:1.75;color:#555b64;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.perspective{padding:24px;background:var(--warm);margin-top:22px}.perspective .label{font-size:10px;letter-spacing:.14em;font-weight:700}.perspective p{font-family:"Playfair Display",serif;font-size:20px;line-height:1.45;margin:10px 0 0}.excerpt{margin-top:24px}.excerpt label{font-size:10px;color:var(--muted);letter-spacing:.12em;font-weight:700}.excerpt blockquote{border-left:2px solid #aeb5be;padding-left:16px;font-family:"Playfair Display",serif;font-size:16px;line-height:1.55;margin:10px 0}.sourcebtn{display:inline-block;margin-top:12px;color:var(--ink);font-size:11px;border-bottom:1px solid var(--ink);padding-bottom:3px}
 .debate{margin-top:20px;border-top:1px solid var(--line);padding-top:22px}.debate h4{margin:0 0 14px;font-size:11px;letter-spacing:.13em}.line{font-size:12px;line-height:1.65;margin:12px 0}.line b{display:block;font-size:10px;letter-spacing:.08em;margin-bottom:3px}.hot{background:#f0e6dc;border:1px solid #e1d1c3;padding:10px 12px;font-size:10px;line-height:1.5;margin-top:14px}.blind{margin-top:34px;border:1px solid #bfc7cf;background:#f1f3f2;padding:28px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:start}.blind-icon{font-size:22px}.blind h3{font-family:"Playfair Display",serif;font-weight:500;font-size:24px;margin:0 0 8px}.blind p{margin:0;color:#606771;font-size:12px;line-height:1.65}.blind a{font-size:11px;color:var(--ink);border-bottom:1px solid var(--ink);text-decoration:none;white-space:nowrap}.footer{border-top:1px solid var(--line);padding:30px 0 60px;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}
 
@@ -25,8 +26,49 @@
 
 @media(max-width:1000px){.hero-grid,.issue-top{grid-template-columns:1fr;gap:35px}.news-grid{grid-template-columns:1fr}.bubble-grid{grid-template-columns:1fr}.issue-meta{text-align:left}.blind{grid-template-columns:auto 1fr}.blind a{grid-column:2}.wrap{padding:0 20px}h1{font-size:68px}}
 
-.flow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:28px 0 10px;padding:13px 16px;border:1px solid var(--line);background:#fff;font-size:10px;letter-spacing:.05em;color:#5f6670}.flow i{font-style:normal;color:#a5abb3}.section-label{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ink);padding:28px 0 16px;margin-top:38px;font-size:10px;letter-spacing:.12em;font-weight:700}.section-label span:last-child{color:var(--muted);font-weight:400;letter-spacing:0}.original-article{background:#fff;border:1px solid var(--line);padding:38px 44px;max-width:940px;margin:0 auto}.original-article .source{font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:700}.original-article h3{font-family:"Playfair Display",serif;font-size:42px;line-height:1.12;font-weight:500;letter-spacing:-.035em;margin:18px 0 10px}.article-meta{font-size:10px;color:var(--muted);padding-bottom:20px;border-bottom:1px solid var(--line)}.original-article>p,.article-body{font-size:14px;line-height:1.85;color:#555b64}.article-body{max-width:780px}.original-article .excerpt{margin-top:28px}.perspective-map{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;background:#fff;border:1px solid var(--line);padding:30px}.map-intro h3{font-family:"Playfair Display",serif;font-weight:500;font-size:28px;line-height:1.2;margin:8px 0 12px}.map-intro p{font-size:13px;color:#626973;line-height:1.7;margin:0}.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.map-card{background:#fafaf8;padding:22px;min-height:120px}.map-card b{display:block;font-size:10px;letter-spacing:.12em}.map-card span{display:block;color:var(--muted);font-size:11px;margin-top:5px}.map-card p{font-family:"Playfair Display",serif;font-size:18px;margin:18px 0 0}.rec-article{margin-top:18px;padding-top:13px;border-top:1px solid var(--line);font-size:11px;color:#454b54}.rec-article span{float:right}.recommendation-note{margin-top:20px;padding:20px;background:var(--warm);font-size:12px;line-height:1.7;color:#565d66}.debate-panel{background:#fff;border:1px solid var(--line);padding:30px}.debate-head{display:flex;justify-content:space-between;gap:20px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:20px}.debate-head h3{font-family:"Playfair Display",serif;font-size:30px;font-weight:500;margin:4px 0 0}.debate-head>span{font-size:10px;color:var(--muted)}.debate-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 35px}.debate-grid .line{padding:20px 0;border-bottom:1px solid var(--line)}.reflection{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;background:#fff;border:1px solid var(--line);padding:30px}.reflection-prompt h3{font-family:"Playfair Display",serif;font-size:30px;line-height:1.2;font-weight:500;margin:7px 0 12px}.reflection-prompt p{font-size:12px;color:var(--muted);line-height:1.7}.reflection-form textarea{width:100%;min-height:170px;border:1px solid var(--line);padding:16px;font:inherit;font-size:13px;line-height:1.7;resize:vertical;outline:none;background:#fafaf8}.reflection-form textarea:focus{border-color:var(--navy)}.feedback{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:12px;font-size:10px;color:var(--muted)}.feedback button{border:1px solid var(--line);background:#fff;padding:8px 10px;font-size:10px;color:#565d66;cursor:pointer}.feedback button.selected{background:var(--navy);color:#fff;border-color:var(--navy)}.save-journal{margin-top:14px;background:var(--navy);color:#fff;border:0;padding:12px 18px;cursor:pointer;font-size:11px}.save-msg{font-size:10px;color:#4f765f;margin-top:9px;min-height:14px}
-@media(max-width:800px){.original-article{padding:26px 22px}.original-article h3{font-size:32px}.perspective-map,.reflection{grid-template-columns:1fr}.map-grid,.debate-grid{grid-template-columns:1fr}.debate-head{align-items:flex-start;flex-direction:column}.section-label{align-items:flex-start;gap:7px;flex-direction:column}}
+.flow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:28px 0 10px;padding:13px 16px;border:1px solid var(--line);background:#fff;font-size:10px;letter-spacing:.05em;color:#5f6670}.flow i{font-style:normal;color:#a5abb3}.section-label{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ink);padding:28px 0 16px;margin-top:38px;font-size:10px;letter-spacing:.12em;font-weight:700}.section-label span:last-child{color:var(--muted);font-weight:400;letter-spacing:0}.original-article{background:#fff;border:1px solid var(--line);padding:38px 44px;max-width:940px;margin:0 auto}.original-article .source{font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:700}.original-article h3{font-family:"Playfair Display",serif;font-size:42px;line-height:1.12;font-weight:500;letter-spacing:-.035em;margin:18px 0 10px}.article-meta{font-size:10px;color:var(--muted);padding-bottom:20px;border-bottom:1px solid var(--line)}.original-article>p,.article-body{font-size:14px;line-height:1.85;color:#555b64}.article-body{max-width:780px}.original-article .excerpt{margin-top:28px}
+.article-brief{margin-top:30px;border-top:1px solid var(--ink)}
+.brief-block{padding:24px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:180px 1fr;gap:28px}
+.brief-block:last-child{border-bottom:0}
+.brief-label{font-size:10px;letter-spacing:.13em;font-weight:700;color:var(--muted);padding-top:3px}
+.brief-copy{font-size:14px;line-height:1.82;color:#424851;max-width:760px}
+.brief-copy p{margin:0}
+.brief-pending{color:#8a9098;font-style:italic}
+.brief-claims{margin:0;padding-left:18px}
+.brief-claims li{margin:0 0 10px;line-height:1.7}
+.reader-badge{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:9px;letter-spacing:.1em;color:var(--muted)}
+.reader-badge:before{content:"";width:6px;height:6px;border-radius:50%;background:#7e8f82}
+.issue-sources{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:10px;line-height:1.7;color:var(--muted);text-align:right}
+.agent-lens{font-family:"Playfair Display",serif!important;font-size:17px!important;line-height:1.55!important;color:#252a31!important;margin:18px 0 12px!important}
+.agent-reason{font-size:12px;color:#666c75;line-height:1.7;margin:0}
+.rec-article{margin-top:18px;padding-top:13px;border-top:1px solid var(--line);font-size:11px;color:#454b54;line-height:1.55}
+.perspective-map{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;background:#fff;border:1px solid var(--line);padding:30px}.map-intro h3{font-family:"Playfair Display",serif;font-weight:500;font-size:28px;line-height:1.2;margin:8px 0 12px}.map-intro p{font-size:13px;color:#626973;line-height:1.7;margin:0}.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.map-card{background:#fafaf8;padding:22px;min-height:120px}.map-card b{display:block;font-size:10px;letter-spacing:.12em}.map-card span{display:block;color:var(--muted);font-size:11px;margin-top:5px}.map-card p{font-family:"Playfair Display",serif;font-size:18px;margin:18px 0 0}.rec-article{margin-top:18px;padding-top:13px;border-top:1px solid var(--line);font-size:11px;color:#454b54}.rec-article span{float:right}.recommendation-note{margin-top:20px;padding:20px;background:var(--warm);font-size:12px;line-height:1.7;color:#565d66}.debate-panel{background:#fff;border:1px solid var(--line);padding:30px}.debate-head{display:flex;justify-content:space-between;gap:20px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:20px}.debate-head h3{font-family:"Playfair Display",serif;font-size:30px;font-weight:500;margin:4px 0 0}.debate-head>span{font-size:10px;color:var(--muted)}.debate-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 35px}.debate-grid .line{padding:20px 0;border-bottom:1px solid var(--line)}.reflection{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;background:#fff;border:1px solid var(--line);padding:30px}.reflection-prompt h3{font-family:"Playfair Display",serif;font-size:30px;line-height:1.2;font-weight:500;margin:7px 0 12px}.reflection-prompt p{font-size:12px;color:var(--muted);line-height:1.7}.reflection-form textarea{width:100%;min-height:170px;border:1px solid var(--line);padding:16px;font:inherit;font-size:13px;line-height:1.7;resize:vertical;outline:none;background:#fafaf8}.reflection-form textarea:focus{border-color:var(--navy)}.feedback{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:12px;font-size:10px;color:var(--muted)}.feedback button{border:1px solid var(--line);background:#fff;padding:8px 10px;font-size:10px;color:#565d66;cursor:pointer}.feedback button.selected{background:var(--navy);color:#fff;border-color:var(--navy)}.save-journal{margin-top:14px;background:var(--navy);color:#fff;border:0;padding:12px 18px;cursor:pointer;font-size:11px}.save-msg{font-size:10px;color:#4f765f;margin-top:9px;min-height:14px}
+
+.starting-note{margin-top:26px;padding:20px 22px;background:#f4f2ec;border-left:3px solid #a9a497}
+.starting-note .label{font-size:9px;letter-spacing:.14em;font-weight:700;color:var(--muted);margin-bottom:8px}
+.starting-note p{margin:0;font-size:12px;line-height:1.75;color:#575d65}
+.pipeline-pending{background:#fff;border:1px solid var(--line);padding:34px 38px;color:#666c75;line-height:1.7}
+.pipeline-pending b{display:block;color:var(--ink);font-family:"Playfair Display",serif;font-size:25px;font-weight:500;margin-bottom:8px}
+.frames-wrap{background:#fff;border:1px solid var(--line);padding:30px}
+.frames-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.frames-head h3{font-family:"Playfair Display",serif;font-size:31px;line-height:1.18;font-weight:500;margin:5px 0 0}
+.frames-head p{font-size:12px;line-height:1.7;color:#666c75;margin:0;align-self:end}
+.frames-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);margin-top:24px;border:1px solid var(--line)}
+.frame-card{background:#fafaf8;padding:24px;min-height:235px;display:flex;flex-direction:column}
+.frame-source{font-size:9px;letter-spacing:.13em;color:var(--muted);font-weight:700}
+.frame-card h4{font-family:"Playfair Display",serif;font-size:21px;line-height:1.28;font-weight:500;margin:15px 0 12px}
+.frame-card p{font-size:12px;line-height:1.7;color:#646b74;margin:0 0 18px}
+.frame-links{margin-top:auto;display:flex;gap:16px;align-items:center;font-size:10px}
+.frame-links a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.next-read{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.next-read-prompt{font-family:"Playfair Display",serif;font-size:15px;line-height:1.4;color:#292e35;margin-bottom:12px}
+.next-read-title{display:block;color:var(--ink);text-decoration:none;font-family:"Playfair Display",serif;font-size:18px;line-height:1.35;margin-bottom:7px}
+.next-read-title:hover{text-decoration:underline;text-underline-offset:3px}
+.next-read-meta{font-size:9px;letter-spacing:.1em;color:var(--muted);margin-bottom:12px}
+.next-read-reason{font-size:12px!important;line-height:1.75!important;color:#5d646d!important;margin:0!important}
+.next-read-link{display:inline-block;margin-top:12px;color:var(--ink);text-decoration:none;font-size:10px;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.legacy-rec{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;line-height:1.6;color:#5e6570}
+@media(max-width:800px){.original-article{padding:26px 22px}.brief-block{grid-template-columns:1fr;gap:8px}.original-article h3{font-size:32px}.perspective-map,.reflection,.frames-head{grid-template-columns:1fr}.map-grid,.debate-grid,.frames-grid{grid-template-columns:1fr}.debate-head{align-items:flex-start;flex-direction:column}.section-label{align-items:flex-start;gap:7px;flex-direction:column}}
 </style></head>
 <body>
 <header class="top"><div class="wrap nav"><div class="brand">BTB <span>/ BREAKING THE BUBBLE</span></div><div class="navlinks"><button onclick="home()">TODAY</button><button onclick="alert('MY BTB는 다음 단계에서 연결합니다.')">MY BTB</button><button onclick="alert('SEARCH는 다음 단계에서 연결합니다.')">SEARCH</button><div class="lang-toggle" aria-label="Content language"><button id="langKo" type="button" onclick="setContentLanguage('ko')">한국어</button><button id="langEn" type="button" onclick="setContentLanguage('en')">English</button></div><button id="logoutBtn" class="hidden" onclick="logout()">LOG OUT</button></div></div></header>
@@ -39,68 +81,19 @@
 <article class="news small" onclick="btb()"><div><div class="tag">TECHNOLOGY</div><h3>AI 산업의 변화가 각국에 미치는 영향</h3><p>기업의 혁신과 규제, 노동시장과 소비자의 이해가 교차합니다.</p></div><div class="meta"><span>TECH</span><span>08 MIN</span></div></article>
 </div><div class="thesis"><strong>BTB PRINCIPLE</strong><blockquote>“What I’m seeing may not be the whole story.”</blockquote></div></section>
 </main>
-<main id="btb" class="hidden"><section class="wrap btb">
-<button class="back" onclick="home()">← TODAY'S NEWS</button>
-<div class="issue-top"><div><div class="kicker">BTB MODE · ISSUE 01</div><h2>미국의 새로운 관세 정책,<br>세계 무역에는 어떤 변화가 일어날까?</h2><p>먼저 원문을 읽고, 그 다음 이 사건을 서로 다른 이해관계자의 눈으로 바라봅니다. Agent들은 각자의 관점에서 기사를 추천하고, 서로의 추천을 읽으며 빠진 부분을 짚습니다.</p></div><div class="issue-meta">4개의 관점 Agent<br>+ Blind Spot Agent<br>12 articles analyzed<br><br>THE QUESTION<br><b>같은 사건도, 다른 관점에서는 다르게 보입니다.</b></div></div>
-
-<div class="flow"><span>01 원문 읽기</span><i>→</i><span>02 관점 보기</span><i>→</i><span>03 추천 기사</span><i>→</i><span>04 반론·보완</span><i>→</i><span>05 Blind Spot</span><i>→</i><span>06 내 생각</span></div>
-
-<div class="section-label"><span>01 · ORIGINAL ARTICLE</span><span>먼저 원문을 읽어보세요</span></div>
-<article class="original-article">
-  <div class="source">INTERNATIONAL NEWS · SAMPLE</div>
-  <h3>새로운 관세 정책이 글로벌 공급망에 던지는 질문</h3>
-  <div class="article-meta">WORLD ECONOMY · 6 MIN READ</div>
-  <p>이 기사는 관세 인상이 국내 산업 보호와 글로벌 공급망 재편에 미칠 수 있는 영향을 설명합니다. 정책의 배경과 기업들의 대응, 예상되는 국제적 파급효과를 중심으로 내용을 구성하고 있습니다.</p>
-  <div class="article-body"><p>기업들은 새로운 비용 구조에 적응하면서 생산과 공급망 전략을 다시 검토하고 있습니다. 일부 기업은 공급처를 다변화하거나 생산기지를 조정할 가능성이 있고, 정책 변화가 교역 상대국의 대응으로 이어질 수 있다는 분석도 제시됩니다.</p><p>한편 관세가 실제 소비자 가격과 산업 경쟁력에 어떤 영향을 줄지는 품목과 시장 상황에 따라 달라질 수 있습니다. 정책을 둘러싼 이해관계가 서로 다르기 때문에 하나의 기사만으로 전체적인 영향을 판단하기에는 한계가 있습니다.</p></div>
-  <div class="excerpt"><label>ORIGINAL EXCERPT</label><blockquote>“기업들은 새로운 비용 구조에 적응하면서 생산과 공급망 전략을 다시 검토하고 있다.”</blockquote></div>
-  <a class="sourcebtn" href="#" onclick="event.preventDefault();alert('실제 뉴스 데이터 연결 단계에서 원문 URL을 연결합니다.')">원문 기사 보기 ↗</a>
-</article>
-
-<div class="section-label"><span>02 · PERSPECTIVE MAP</span><span>같은 사건을 누구의 눈으로 보면 무엇이 달라지는가?</span></div>
-<div class="perspective-map">
-  <div class="map-intro"><div class="kicker">ARTICLE'S FRAME</div><h3>이 기사는 무엇을 중심으로 사건을 보여주고 있을까?</h3><p>현재 선택된 기사는 <b>국내 산업의 경쟁력과 보호</b>를 비교적 중심에 두고 있습니다. 이것이 틀렸다는 뜻이 아니라, 다른 이해관계자의 질문을 추가하면 보이지 않던 부분이 나타날 수 있다는 뜻입니다.</p></div>
-  <div class="map-grid">
-    <div class="map-card"><b>INDUSTRY</b><span>기업 · 제조업</span><p>비용, 생산기지, 경쟁력</p></div>
-    <div class="map-card"><b>CONSUMER</b><span>소비자</span><p>가격, 구매력, 생활비</p></div>
-    <div class="map-card"><b>TRADE PARTNER</b><span>교역 상대국</span><p>수출, 보복조치, 공급망</p></div>
-    <div class="map-card"><b>POLICY</b><span>정부 · 정책</span><p>정책 목표, 안보, 산업정책</p></div>
-  </div>
-</div>
-
-<div class="section-label"><span>03 · AGENT RECOMMENDATIONS</span><span>각 Agent가 고른 다음 기사</span></div>
-<div class="bubble-grid">
-<div class="agent-col">
-  <div class="agent-card"><div class="agent-name">INDUSTRY AGENT</div><div class="agent-role">제조업 / 기업 관점</div><h4>생산자의 비용과 경쟁력을 중심으로 보면?</h4><p>관세가 생산기지와 공급망에 어떤 변화를 줄 수 있는지 다루는 기사를 추천합니다.</p><div class="rec-article">추천 기사 · 공급망 재편과 기업의 대응 <span>↗</span></div><div class="strength">RECOMMENDATION <span class="dots">●●●</span></div></div>
-  <div class="agent-card"><div class="agent-name">CONSUMER AGENT</div><div class="agent-role">소비자 관점</div><h4>결국 가격을 지불하는 사람은 누구인가?</h4><p>정책 효과를 소비자 가격과 구매력의 변화라는 관점에서 바라보는 기사를 추천합니다.</p><div class="rec-article">추천 기사 · 관세와 소비자 가격 <span>↗</span></div><div class="strength">RECOMMENDATION <span class="dots">●●○</span></div></div>
-</div>
-<article class="center article"><div class="source">WHY THIS ARTICLE?</div><h3>이 기사를 더 읽어야 하는 이유</h3><div class="summary">원문이 산업 경쟁력에 초점을 맞추고 있다면, 이 추천 기사들은 그 정책이 다른 집단에 어떤 의미가 되는지 확인하도록 도와줍니다.</div><div class="recommendation-note"><b>BTB는 “어느 기사가 맞는가”를 결정하지 않습니다.</b><br>각 기사가 어떤 관점과 질문을 추가하는지 보여줍니다.</div></article>
-<div class="agent-col">
-  <div class="agent-card"><div class="agent-name">TRADE PARTNER AGENT</div><div class="agent-role">교역 상대국 관점</div><h4>상대국은 이 정책을 어떻게 받아들일까?</h4><p>관세에 대응하는 다른 국가의 정책과 수출기업에 미칠 영향을 다루는 기사를 추천합니다.</p><div class="rec-article">추천 기사 · 교역 상대국의 대응 <span>↗</span></div><div class="strength">RECOMMENDATION <span class="dots">●●●</span></div></div>
-  <div class="agent-card"><div class="agent-name">POLICY AGENT</div><div class="agent-role">정부 / 정책 관점</div><h4>정책의 목표와 실제 효과를 분리해서 보기</h4><p>정책 결정의 배경과 정부가 제시한 목표를 확인할 수 있는 자료를 추천합니다.</p><div class="rec-article">추천 기사 · 관세 정책의 목표와 근거 <span>↗</span></div><div class="strength">RECOMMENDATION <span class="dots">●●○</span></div></div>
-</div></div>
-
-<div class="section-label"><span>04 · AGENT DEBATE</span><span>서로의 추천을 읽고 빈틈을 짚습니다</span></div>
-<div class="debate-panel"><div class="debate-head"><div><div class="kicker">ONLINE DEBATE HALL</div><h3>한 관점이 다른 관점을 만나면</h3></div><span>4 AGENTS · 6 EXCHANGES</span></div><div class="debate-grid"><div class="line"><b>CONSUMER AGENT → INDUSTRY AGENT</b>기업 경쟁력의 변화만으로 정책 효과를 설명하면 소비자가 부담하게 될 가격 변화가 가려질 수 있습니다.</div><div class="line"><b>INDUSTRY AGENT → CONSUMER AGENT</b>반대로 단기 가격만 강조하면 장기적인 생산기반과 공급망 안정성의 문제를 놓칠 수 있습니다.</div><div class="line"><b>TRADE PARTNER AGENT → ALL</b>국내 정책만 보면 교역 상대국의 대응으로 생길 수 있는 2차 효과가 빠질 수 있습니다.</div><div class="line"><b>POLICY AGENT → ALL</b>정책의 의도와 실제 결과는 구분해서 살펴볼 필요가 있습니다.</div></div><div class="hot">🔥 <b>현재 쟁점</b> · 비용 부담, 산업 경쟁력, 국제적 대응을 각각 보면 서로 다른 정책 효과가 강조됩니다.</div></div>
-
-<div class="section-label"><span>05 · BLIND SPOT</span><span>이 문제에서 빠진 이해관계자가 누구지?</span></div>
-<div class="blind"><div class="blind-icon">🧩</div><div><div class="kicker">BLIND SPOT AGENT</div><h3>잠깐, 아직 등장하지 않은 관점이 있습니다.</h3><p>현재 토론은 정부·기업·소비자·교역 상대국을 다루고 있습니다. 그러나 공급망에 직접 연결된 <b>중소기업과 특정 지역 노동자</b>에 대한 영향은 상대적으로 적게 다뤄지고 있습니다.</p></div><a href="#" onclick="event.preventDefault();alert('관련 기사 탐색은 실제 뉴스 연결 단계에서 활성화합니다.')">관련 기사 보기 ↗</a></div>
-
-<div class="section-label"><span>06 · YOUR REFLECTION</span><span>이제 내가 생각한 것을 기록합니다</span></div>
-<div class="reflection"><div class="reflection-prompt"><div class="kicker">JOURNAL</div><h3>“나는 이 사건을 어떻게 보고 있었나?”</h3><p>정답을 적는 곳이 아닙니다. 새로운 관점이나 생각의 변화를 자유롭게 기록하세요.</p></div><div class="reflection-form"><textarea id="journal" placeholder="예: 처음에는 미국의 산업 보호 정책이라고만 생각했는데, 교역 상대국과 소비자 관점까지 보니 정책의 효과가 훨씬 복잡하다는 생각이 들었다."></textarea><div class="feedback"><span>오늘 이 BTB가 나에게</span><button onclick="feedback(this)">새로운 관점을 줬다</button><button onclick="feedback(this)">유용했다</button><button onclick="feedback(this)">이미 알고 있던 내용이 많았다</button><button onclick="feedback(this)">아직 더 알아보고 싶다</button></div><button class="save-journal" onclick="saveJournal()">내 생각 저장하기 →</button><div id="saveMsg" class="save-msg"></div></div></div>
-</section></main>
+<main id="btb" class="hidden"><section class="wrap btb"></section></main>
 <footer class="wrap footer"><div><span>BREAKING THE BUBBLE</span><br><span>© Blair Bora Kang</span><br><a href="mailto:blairborakang@gmail.com">blairborakang@gmail.com</a></div><span>One story is never the whole story.</span></footer>
 
 <div id="loginModal" class="login-overlay">
   <div class="login-box">
-    <div class="kicker">PRIVATE ACCESS</div>
+    <div class="kicker">BTB</div>
     <h2>Enter BTB</h2>
-    <p>등록된 BTB 계정으로 로그인해주세요.<br>회원가입은 공개하지 않으며, 승인된 계정만 이용할 수 있습니다.</p>
     <form onsubmit="login(event)">
       <label>EMAIL</label>
       <input id="email" type="email" autocomplete="username" required>
       <label>PASSWORD</label>
       <input id="password" type="password" autocomplete="current-password" required>
-      <button class="login-btn" type="submit">로그인하고 BTB 열기 →</button>
+      <button class="login-btn" type="submit">ENTER →</button>
       <div id="loginError" class="login-error"></div>
     </form>
   </div>
@@ -127,6 +120,36 @@ function localized(row, field, fallback=''){
   const korean=row[`${field}_ko`];
   if(korean) return korean;
   return fallback;
+}
+
+
+function localizedArray(row, field){
+  if(!row) return [];
+  const preferred=row[`${field}_${contentLanguage}`];
+  if(Array.isArray(preferred)) return preferred;
+  if(typeof preferred==='string'){
+    try{const parsed=JSON.parse(preferred);if(Array.isArray(parsed)) return parsed;}catch(e){}
+  }
+  const english=row[`${field}_en`];
+  if(Array.isArray(english)) return english;
+  if(typeof english==='string'){
+    try{const parsed=JSON.parse(english);if(Array.isArray(parsed)) return parsed;}catch(e){}
+  }
+  const korean=row[`${field}_ko`];
+  if(Array.isArray(korean)) return korean;
+  if(typeof korean==='string'){
+    try{const parsed=JSON.parse(korean);if(Array.isArray(parsed)) return parsed;}catch(e){}
+  }
+  return [];
+}
+
+function formatDate(value){
+  if(!value) return '';
+  const d=new Date(value);
+  if(Number.isNaN(d.getTime())) return String(value);
+  return d.toLocaleDateString(contentLanguage==='ko'?'ko-KR':'en-US',{
+    year:'numeric',month:'short',day:'numeric'
+  });
 }
 
 function updateLanguageButtons(){
@@ -171,7 +194,7 @@ async function loadIssues(){
 
   const {data,error}=await supabaseClient
     .from('btb_issues')
-    .select('id,issue_date,title,title_en,title_ko,summary,summary_en,summary_ko,question,question_en,question_ko,article_count,created_at')
+    .select('id,issue_date,title,title_en,title_ko,summary,summary_en,summary_ko,question,question_en,question_ko,article_count,anchor_article_id,anchor_reason_en,anchor_reason_ko,anchor_status,created_at')
     .order('issue_date',{ascending:false})
     .order('created_at',{ascending:false})
     .limit(30);
@@ -221,43 +244,243 @@ async function openIssue(issueId){
 function renderIssue(d){
   const issue=d.issue, arts=d.articles, agents=d.agents, debate=d.debate;
   const root=document.querySelector('#btb .btb');
-  const fallbackSummary=contentLanguage==='ko'
-    ? '원문을 먼저 읽고, 서로 다른 이해관계자의 관점과 빠진 시각을 확인합니다.'
-    : 'Start with the source article, then compare stakeholder perspectives and missing viewpoints.';
-  const fallbackQuestion=contentLanguage==='ko'
-    ? '같은 사건도, 다른 관점에서는 다르게 보입니다.'
-    : 'How does this issue look from another perspective?';
+  const regularAgents=agents.filter(a=>!a.blind_spot);
+  const sourceNames=[...new Set(arts.map(a=>a.source).filter(Boolean))];
+  const anchorArticle=issue.anchor_article_id
+    ? arts.find(a=>a.id===issue.anchor_article_id)
+    : null;
 
-  root.innerHTML=`<button class="back" onclick="home()">← TODAY'S NEWS</button>
-  <div class="issue-top"><div><div class="kicker">BTB MODE · LIVE ISSUE</div><h2>${esc(localized(issue,'title'))}</h2><p>${esc(localized(issue,'summary',fallbackSummary))}</p></div><div class="issue-meta">${agents.filter(a=>!a.blind_spot).length}개의 관점 Agent<br>+ Blind Spot Agent<br>${arts.length} articles analyzed<br><br>THE QUESTION<br><b>${esc(localized(issue,'question',fallbackQuestion))}</b></div></div>
-  <div class="flow"><span>01 원문 읽기</span><i>→</i><span>02 관점 보기</span><i>→</i><span>03 추천 기사</span><i>→</i><span>04 반론·보완</span><i>→</i><span>05 Blind Spot</span><i>→</i><span>06 내 생각</span></div>
-  ${renderOriginal(arts[0])}
-  <div class="section-label"><span>02 · PERSPECTIVE MAP</span><span>같은 사건도, 다른 관점에서는 다르게 보입니다.</span></div>
-  <div class="perspective-map"><div class="map-intro"><div class="kicker">ARTICLE'S FRAME</div><h3>이 이슈를 바라보는 주요 이해관계자</h3><p>BTB는 하나의 정답을 고르기보다, 어떤 질문이 추가되면 사건이 다르게 보이는지 보여줍니다.</p></div><div class="map-grid">${agents.filter(a=>!a.blind_spot).slice(0,4).map(a=>`<div class="map-card"><b>${esc(localized(a,'agent_name'))}</b><span>${esc(localized(a,'role'))}</span><p>${esc(localized(a,'lens'))}</p></div>`).join('')}</div></div>
-  <div class="section-label"><span>03 · AGENT RECOMMENDATIONS</span><span>각 Agent가 고른 다음 기사</span></div>
-  <div class="bubble-grid"><div class="agent-col">${agents.filter(a=>!a.blind_spot).slice(0,2).map(renderAgent).join('')}</div><article class="center article"><div class="source">WHY THESE ARTICLES?</div><h3>한 기사를 더 읽으면 무엇이 달라질까</h3><div class="summary">각 Agent는 자신이 중요하다고 보는 이해관계와 질문을 기준으로 다음 읽을거리를 추천합니다.</div><div class="recommendation-note"><b>BTB는 어느 관점이 맞는지 판정하지 않습니다.</b><br>추천 이유와 서로 다른 질문을 비교해서 읽어보세요.</div></article><div class="agent-col">${agents.filter(a=>!a.blind_spot).slice(2,4).map(renderAgent).join('')}</div></div>
-  <div class="section-label"><span>04 · AGENT DEBATE</span><span>서로의 추천을 읽고 빈틈을 짚습니다</span></div>
-  <div class="debate-panel"><div class="debate-head"><div><div class="kicker">ONLINE DEBATE HALL</div><h3>한 관점이 다른 관점을 만나면</h3></div><span>${debate.length} EXCHANGES</span></div><div class="debate-grid">${debate.map(x=>`<div class="line"><b>${esc(localized(x,'from_agent'))} → ${esc(localized(x,'to_agent'))}</b>${esc(localized(x,'text'))}</div>`).join('') || '<div class="line">현재 토론 데이터가 없습니다.</div>'}</div></div>
-  ${renderBlind(agents.find(a=>a.blind_spot))}
-  <div class="section-label"><span>06 · YOUR REFLECTION</span><span>이제 내가 생각한 것을 기록합니다</span></div>
-  <div class="reflection"><div class="reflection-prompt"><div class="kicker">JOURNAL</div><h3>“나는 이 사건을 어떻게 보고 있었나?”</h3><p>정답을 적는 곳이 아닙니다. 새로운 관점이나 생각의 변화를 자유롭게 기록하세요.</p></div><div class="reflection-form"><textarea id="journal" placeholder="예: 처음에는 한 가지 관점으로 생각했는데, 다른 이해관계자를 보니 놓친 부분이 있었다."></textarea><div class="feedback"><span>오늘 이 BTB가 나에게</span><button onclick="feedback(this)">새로운 관점을 줬다</button><button onclick="feedback(this)">유용했다</button><button onclick="feedback(this)">이미 알고 있던 내용이 많았다</button><button onclick="feedback(this)">아직 더 알아보고 싶다</button></div><button class="save-journal" onclick="saveJournal()">내 생각 저장하기 →</button><div id="saveMsg" class="save-msg"></div></div></div>`;
+  const fallbackSummary=contentLanguage==='ko'
+    ? '이 이슈의 핵심 맥락과 서로 다른 이해관계를 정리합니다.'
+    : 'A compact view of the issue, its context, and competing stakeholder interests.';
+  const fallbackQuestion=contentLanguage==='ko'
+    ? '이 이슈에서 실제로 충돌하는 이해관계는 무엇인가?'
+    : 'Which interests and assumptions are actually in tension here?';
+
+  root.innerHTML=`<button class="back" onclick="home()">← TODAY</button>
+  <div class="issue-top">
+    <div>
+      <div class="kicker">BTB · ${esc((issue.issue_date||'').replaceAll('-','.'))}</div>
+      <h2>${esc(localized(issue,'title'))}</h2>
+      <p>${esc(localized(issue,'summary',fallbackSummary))}</p>
+    </div>
+    <div class="issue-meta">
+      ${regularAgents.length} PERSPECTIVES · ${arts.length} ARTICLES
+      <br><br>THE QUESTION<br>
+      <b>${esc(localized(issue,'question',fallbackQuestion))}</b>
+      ${sourceNames.length?`<div class="issue-sources">SOURCES · ${sourceNames.map(esc).join(' · ')}</div>`:''}
+    </div>
+  </div>
+
+  <div class="flow"><span>STARTING ARTICLE</span><i>→</i><span>OTHER FRAMES</span><i>→</i><span>PERSPECTIVES</span><i>→</i><span>DEBATE</span><i>→</i><span>BLIND SPOT</span></div>
+
+  ${anchorArticle
+    ? renderOriginal(anchorArticle,issue)
+    : renderStartingArticlePending(issue)}
+
+  ${renderOtherFrames(arts,issue.anchor_article_id)}
+
+  <div class="section-label"><span>03 · PERSPECTIVES</span><span>${contentLanguage==='ko'?'누가 무엇을 중요하게 보는가':'What each stakeholder is trying to protect or achieve'}</span></div>
+  <div class="perspective-map">
+    <div class="map-intro">
+      <div class="kicker">STAKEHOLDER MAP</div>
+      <h3>${contentLanguage==='ko'?'같은 사건, 다른 이해관계':'Same event, different stakes'}</h3>
+      <p>${contentLanguage==='ko'?'각 관점의 목표와 해석 차이를 비교합니다.':'Compare what each stakeholder prioritizes and how that changes the interpretation.'}</p>
+    </div>
+    <div class="map-grid">
+      ${regularAgents.slice(0,4).map(a=>`<div class="map-card"><b>${esc(localized(a,'agent_name'))}</b><span>${esc(localized(a,'role'))}</span><p>${esc(localized(a,'lens'))}</p></div>`).join('') || `<div class="map-card"><b>AGENTS</b><p>${contentLanguage==='ko'?'새 Reader 기반 Agent를 준비 중입니다.':'Reader-grounded agents are being prepared.'}</p></div>`}
+    </div>
+  </div>
+
+  <div class="section-label"><span>04 · AGENT VIEWS</span><span>${contentLanguage==='ko'?'논리와 다음 읽을거리':'Reasoning and the next read'}</span></div>
+  <div class="bubble-grid">
+    <div class="agent-col">${regularAgents.slice(0,2).map(a=>renderAgent(a,arts)).join('')}</div>
+    <article class="center article">
+      <div class="source">ISSUE QUESTION</div>
+      <h3>${esc(localized(issue,'question',fallbackQuestion))}</h3>
+      <div class="summary">${contentLanguage==='ko'
+        ? '각 Agent는 같은 보도를 읽고도 서로 다른 이해관계와 우선순위에서 논리를 전개합니다.'
+        : 'Each agent works from the same reporting but reasons from a different set of interests and priorities.'}</div>
+    </article>
+    <div class="agent-col">${regularAgents.slice(2,4).map(a=>renderAgent(a,arts)).join('')}</div>
+  </div>
+
+  <div class="section-label"><span>05 · AGENT DEBATE</span><span>${contentLanguage==='ko'?'서로의 논리를 직접 반박합니다':'Direct rebuttal between perspectives'}</span></div>
+  <div class="debate-panel">
+    <div class="debate-head">
+      <div><div class="kicker">DEBATE</div><h3>${contentLanguage==='ko'?'논리가 부딪히는 지점':'Where the arguments collide'}</h3></div>
+      <span>${debate.length} EXCHANGES</span>
+    </div>
+    <div class="debate-grid">
+      ${debate.map(x=>`<div class="line"><b>${esc(localized(x,'from_agent'))} → ${esc(localized(x,'to_agent'))}</b>${esc(localized(x,'text'))}</div>`).join('') || `<div class="line">${contentLanguage==='ko'?'토론 데이터가 없습니다.':'No debate data yet.'}</div>`}
+    </div>
+  </div>
+
+  ${renderBlind(agents.find(a=>a.blind_spot),'06')}
+
+  <div class="section-label"><span>07 · NOTES</span><span>${contentLanguage==='ko'?'생각 기록':'Your reflection'}</span></div>
+  <div class="reflection">
+    <div class="reflection-prompt">
+      <div class="kicker">JOURNAL</div>
+      <h3>${contentLanguage==='ko'?'지금 내 생각은?':'What do I think now?'}</h3>
+      <p>${contentLanguage==='ko'?'처음 생각과 달라진 점이 있다면 기록해두세요.':'Save anything that changed, sharpened, or remained unresolved.'}</p>
+    </div>
+    <div class="reflection-form">
+      <textarea id="journal" placeholder="${contentLanguage==='ko'?'메모를 남겨보세요.':'Write a note.'}"></textarea>
+      <div class="feedback">
+        <span>${contentLanguage==='ko'?'이 분석은':'This issue brief was'}</span>
+        <button onclick="feedback(this)">${contentLanguage==='ko'?'새로운 관점':'A new angle'}</button>
+        <button onclick="feedback(this)">${contentLanguage==='ko'?'유용함':'Useful'}</button>
+        <button onclick="feedback(this)">${contentLanguage==='ko'?'익숙한 내용':'Mostly familiar'}</button>
+        <button onclick="feedback(this)">${contentLanguage==='ko'?'더 알아보기':'Need more'}</button>
+      </div>
+      <button class="save-journal" onclick="saveJournal()">${contentLanguage==='ko'?'저장 →':'SAVE →'}</button>
+      <div id="saveMsg" class="save-msg"></div>
+    </div>
+  </div>`;
 }
 
-function renderOriginal(a){
-  if(!a) return '<div class="section-label"><span>01 · ORIGINAL ARTICLE</span></div><div class="original-article">기사 데이터가 없습니다.</div>';
+function renderOriginal(a,issue){
+  if(!a) return `<div class="section-label"><span>01 · ARTICLE BRIEF</span></div><div class="original-article">${contentLanguage==='ko'?'기사 데이터가 없습니다.':'No article data.'}</div>`;
+
   const title=localized(a,'title');
   const description=localized(a,'description');
-  return `<div class="section-label"><span>01 · ORIGINAL ARTICLE</span><span>먼저 원문을 읽어보세요</span></div><article class="original-article"><div class="source">${esc(a.source||'INTERNATIONAL NEWS')}</div><h3>${esc(title)}</h3><div class="article-meta">${a.published_at?new Date(a.published_at).toLocaleString(contentLanguage==='ko'?'ko-KR':'en-US'):''}</div><p>${esc(description)}</p><div class="excerpt"><label>BTB SOURCE NOTE</label><blockquote>이 페이지는 원문을 대신하지 않습니다. 핵심 맥락을 확인한 뒤 원문을 직접 읽어보세요.</blockquote></div><a class="sourcebtn" href="${esc(a.url)}" target="_blank" rel="noopener">원문 기사 보기 ↗</a></article>`;
+  const whatHappened=localized(a,'what_happened');
+  const keyContext=localized(a,'key_context');
+  const emphasis=localized(a,'emphasis',localized(a,'frame'));
+  const claims=localizedArray(a,'key_claims');
+  const unclear=localized(a,'remains_unclear');
+
+  const readerReady=Boolean(a.what_happened_en || a.what_happened_ko);
+  const pendingText=contentLanguage==='ko'
+    ? 'Reader가 이 항목을 처리 중입니다.'
+    : 'Reader is processing this section.';
+
+  const readerMode=a.reader_status==='complete'
+    ? (contentLanguage==='ko'?'본문 읽기 완료':'Full article read')
+    : a.reader_status==='partial'
+      ? (contentLanguage==='ko'?'부분 본문 기반':'Partial article read')
+      : (contentLanguage==='ko'?'Reader 처리 대기':'Reader pending');
+
+  const block=(label,body)=>`<div class="brief-block"><div class="brief-label">${label}</div><div class="brief-copy">${body}</div></div>`;
+
+  const whatBody=whatHappened
+    ? `<p>${esc(whatHappened)}</p>`
+    : `<p>${esc(description || pendingText)}</p>`;
+
+  const contextBody=keyContext
+    ? `<p>${esc(keyContext)}</p>`
+    : `<p class="brief-pending">${esc(pendingText)}</p>`;
+
+  const emphasisBody=emphasis
+    ? `<p>${esc(emphasis)}</p>`
+    : `<p class="brief-pending">${esc(pendingText)}</p>`;
+
+  const claimsBody=claims.length
+    ? `<ul class="brief-claims">${claims.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`
+    : `<p class="brief-pending">${esc(pendingText)}</p>`;
+
+  const unclearBody=unclear
+    ? `<p>${esc(unclear)}</p>`
+    : `<p class="brief-pending">${esc(pendingText)}</p>`;
+
+  return `<div class="section-label"><span>01 · ARTICLE BRIEF</span><span>${esc(a.source||'')}</span></div>
+  <article class="original-article">
+    <div class="source">${esc(a.source||'INTERNATIONAL NEWS')}</div>
+    <h3>${esc(title)}</h3>
+    <div class="article-meta">${formatDate(a.published_at)}</div>
+    <div class="reader-badge">BTB READER · ${esc(readerMode)}</div>
+    ${localized(issue,'anchor_reason')?`<div class="starting-note"><div class="label">WHY THIS STARTING POINT</div><p>${esc(localized(issue,'anchor_reason'))}</p></div>`:''}
+
+    <div class="article-brief">
+      ${block('WHAT HAPPENED',whatBody)}
+      ${block('KEY CONTEXT',contextBody)}
+      ${block('WHAT THIS ARTICLE EMPHASIZES',emphasisBody)}
+      ${block('KEY CLAIMS &amp; EVIDENCE',claimsBody)}
+      ${block('WHAT REMAINS UNCLEAR',unclearBody)}
+    </div>
+
+    <a class="sourcebtn" href="${esc(a.url)}" target="_blank" rel="noopener">READ ORIGINAL ↗</a>
+  </article>`;
 }
 
-function renderAgent(a){
-  return `<div class="agent-card"><div class="agent-name">${esc(localized(a,'agent_name'))}</div><div class="agent-role">${esc(localized(a,'role'))}</div><h4>${esc(localized(a,'lens'))}</h4><p>${esc(localized(a,'reason'))}</p><div class="rec-article">추천 방향 · ${esc(localized(a,'recommendation'))}</div><div class="strength">RECOMMENDATION <span class="dots">${'●'.repeat(a.strength||2)}${'○'.repeat(3-(a.strength||2))}</span></div></div>`;
+function renderStartingArticlePending(issue){
+  const status=issue?.anchor_status||'';
+  const detail=status==='pending_more_reader'
+    ? (contentLanguage==='ko'?'비교할 수 있는 Reader 기사들이 더 쌓이면 시작 기사가 정해집니다.':'The starting article will be selected after more Reader-processed coverage is available for comparison.')
+    : (contentLanguage==='ko'?'Reader와 기사 선택 과정이 아직 진행 중입니다.':'Reader processing and starting-article selection are still in progress.');
+  return `<div class="section-label"><span>01 · ARTICLE BRIEF</span><span>STARTING POINT</span></div>
+  <div class="pipeline-pending"><b>${contentLanguage==='ko'?'기사를 준비 중입니다.':'Preparing the starting article.'}</b>${esc(detail)}</div>`;
 }
 
-function renderBlind(a){
-  const lens=localized(a,'lens',contentLanguage==='ko'?'아직 충분히 다뤄지지 않은 관점이 있는지 확인합니다.':'Look for a perspective that has not been sufficiently represented.');
-  const reason=localized(a,'reason',contentLanguage==='ko'?'현재 기사와 관점 목록에서 상대적으로 적게 다뤄진 이해관계자나 차원을 찾아보세요.':'Look for stakeholders or dimensions that receive less attention in the current coverage.');
-  return `<div class="section-label"><span>05 · BLIND SPOT</span><span>이 문제에서 빠진 이해관계자가 누구지?</span></div><div class="blind"><div class="blind-icon">🧩</div><div><div class="kicker">BLIND SPOT AGENT</div><h3>${esc(lens)}</h3><p>${esc(reason)}</p></div></div>`;
+function renderOtherFrames(arts,anchorArticleId){
+  const candidates=arts
+    .filter(a=>a.id!==anchorArticleId)
+    .filter(a=>a.what_happened_en || a.what_happened_ko || a.emphasis_en || a.emphasis_ko || a.frame_en || a.frame_ko)
+    .slice(0,6);
+
+  const intro=contentLanguage==='ko'
+    ? '같은 이슈를 다른 보도가 어디에 초점을 두고 설명하는지 비교합니다. 각 카드는 정답이 아니라, 보도에서 전면에 놓인 질문과 맥락을 보여줍니다.'
+    : 'Compare what other reporting foregrounds in the same issue. Each card shows a different emphasis in the coverage, not a verdict on which frame is correct.';
+
+  const cards=candidates.length
+    ? candidates.map(a=>{
+        const emphasis=localized(a,'emphasis',localized(a,'frame',localized(a,'description')));
+        return `<article class="frame-card">
+          <div class="frame-source">${esc(a.source||'INTERNATIONAL NEWS')} · ${esc(formatDate(a.published_at))}</div>
+          <h4>${esc(localized(a,'title'))}</h4>
+          <p>${esc(emphasis || (contentLanguage==='ko'?'Reader가 이 기사의 강조점을 정리 중입니다.':'Reader is still mapping this article’s emphasis.'))}</p>
+          <div class="frame-links">${a.url?`<a href="${esc(a.url)}" target="_blank" rel="noopener">READ ORIGINAL ↗</a>`:''}</div>
+        </article>`;
+      }).join('')
+    : `<article class="frame-card"><div class="frame-source">READER</div><h4>${contentLanguage==='ko'?'다른 프레임을 준비 중입니다.':'Other frames are being prepared.'}</h4><p>${contentLanguage==='ko'?'같은 이슈의 다른 기사들이 Reader 처리를 마치면 여기에 비교 관점이 나타납니다.':'As other articles complete Reader processing, their different emphases will appear here.'}</p></article>`;
+
+  return `<div class="section-label"><span>02 · OTHER FRAMES IN TODAY’S COVERAGE</span><span>${candidates.length} ${contentLanguage==='ko'?'개의 다른 읽기':'other reads'}</span></div>
+  <section class="frames-wrap">
+    <div class="frames-head"><div><div class="kicker">SEEN DIFFERENTLY</div><h3>${contentLanguage==='ko'?'같은 사건은 어디에서 다르게 보이는가':'Where does the same story look different?'}</h3></div><p>${esc(intro)}</p></div>
+    <div class="frames-grid">${cards}</div>
+  </section>`;
+}
+
+function renderAgent(a,arts){
+  const reason=localized(a,'reason');
+  const recommended=a.recommended_article_id
+    ? arts.find(article=>article.id===a.recommended_article_id)
+    : null;
+  const legacyRec=localized(a,'recommendation');
+
+  const nextRead=recommended
+    ? `<div class="next-read">
+        <div class="next-read-prompt">If you want to understand my argument, read this next.</div>
+        <a class="next-read-title" href="${esc(recommended.url||'#')}" target="_blank" rel="noopener">${esc(localized(recommended,'title'))}</a>
+        <div class="next-read-meta">${esc(recommended.source||'INTERNATIONAL NEWS')}${recommended.published_at?` · ${esc(formatDate(recommended.published_at))}`:''}</div>
+        ${reason?`<p class="next-read-reason">${esc(reason)}</p>`:''}
+        ${recommended.url?`<a class="next-read-link" href="${esc(recommended.url)}" target="_blank" rel="noopener">READ ORIGINAL ↗</a>`:''}
+      </div>`
+    : legacyRec
+      ? `<div class="legacy-rec"><b>${contentLanguage==='ko'?'현재 추천 읽을거리':'Current recommended reading'}</b><br>${esc(legacyRec)}${reason?`<br><br>${esc(reason)}`:''}</div>`
+      : `<div class="legacy-rec">${contentLanguage==='ko'?'Reader 기반 다음 읽을거리를 준비 중입니다.':'A Reader-grounded next read is being prepared.'}</div>`;
+
+  return `<div class="agent-card">
+    <div class="agent-name">${esc(localized(a,'agent_name'))}</div>
+    <div class="agent-role">${esc(localized(a,'role'))}</div>
+    <p class="agent-lens">${esc(localized(a,'lens'))}</p>
+    ${nextRead}
+  </div>`;
+}
+
+function renderBlind(a,sectionNumber='05'){
+  const lens=localized(a,'lens',contentLanguage==='ko'?'아직 충분히 다뤄지지 않은 관점을 찾습니다.':'A perspective is still underrepresented.');
+  const reason=localized(a,'reason','');
+  return `<div class="section-label"><span>${sectionNumber} · BLIND SPOT</span><span>${contentLanguage==='ko'?'아직 빠진 것은 무엇인가':'What is still missing'}</span></div>
+  <div class="blind">
+    <div class="blind-icon">◌</div>
+    <div>
+      <div class="kicker">BLIND SPOT</div>
+      <h3>${esc(lens)}</h3>
+      ${reason?`<p>${esc(reason)}</p>`:''}
+    </div>
+  </div>`;
 }
 function openBTB(){loadIssues();}
 
@@ -282,7 +505,7 @@ async function login(event){
 
   const {error:authError}=await supabaseClient.auth.signInWithPassword({email,password});
   if(authError){
-    error.textContent='이메일 또는 비밀번호를 확인해주세요.';
+    error.textContent='Check your email or password.';
     return;
   }
 
@@ -307,8 +530,8 @@ function home(){
   scrollTo(0,0);
   loadIssues();
 }
-function feedback(btn){document.querySelectorAll('.feedback button').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');selectedFeedback=btn.textContent;document.getElementById('saveMsg').textContent='피드백이 선택되었습니다. 저장할 때 함께 기록됩니다.';}
-async function saveJournal(){const text=document.getElementById('journal').value.trim();if(!text){document.getElementById('saveMsg').textContent='먼저 생각을 한 줄이라도 적어주세요.';return;}const {data:{user}}=await supabaseClient.auth.getUser();if(!user||!currentIssue){return;}const {error}=await supabaseClient.from('btb_reflections').insert({user_id:user.id,issue_id:currentIssue.issue.id,journal:text,feedback:selectedFeedback||null});document.getElementById('saveMsg').textContent=error?'저장에 실패했습니다.':'저장했습니다. MY BTB 학습 데이터에 기록되었습니다.';}
+function feedback(btn){document.querySelectorAll('.feedback button').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');selectedFeedback=btn.textContent;document.getElementById('saveMsg').textContent=contentLanguage==='ko'?'선택됨.':'Selected.';}
+async function saveJournal(){const text=document.getElementById('journal').value.trim();if(!text){document.getElementById('saveMsg').textContent=contentLanguage==='ko'?'메모를 입력해주세요.':'Write a note first.';return;}const {data:{user}}=await supabaseClient.auth.getUser();if(!user||!currentIssue){return;}const {error}=await supabaseClient.from('btb_reflections').insert({user_id:user.id,issue_id:currentIssue.issue.id,journal:text,feedback:selectedFeedback||null});document.getElementById('saveMsg').textContent=error?(contentLanguage==='ko'?'저장 실패.':'Save failed.'):(contentLanguage==='ko'?'저장됨.':'Saved.');}
 window.addEventListener('DOMContentLoaded',async()=>{
   updateLanguageButtons();
 
