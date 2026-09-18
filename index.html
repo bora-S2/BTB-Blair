@@ -272,7 +272,7 @@ function renderIssue(d){
     </div>
   </div>
 
-  <div class="flow"><span>STARTING ARTICLE</span><i>→</i><span>OTHER FRAMES</span><i>→</i><span>PERSPECTIVES</span><i>→</i><span>DEBATE</span><i>→</i><span>BLIND SPOT</span></div>
+  <div class="flow"><span>ARTICLE BRIEF</span><i>→</i><span>OTHER FRAMES</span><i>→</i><span>PERSPECTIVES</span><i>→</i><span>DEBATE</span><i>→</i><span>BLIND SPOT</span></div>
 
   ${anchorArticle
     ? renderOriginal(anchorArticle,issue)
@@ -390,7 +390,7 @@ function renderOriginal(a,issue){
     <h3>${esc(title)}</h3>
     <div class="article-meta">${formatDate(a.published_at)}</div>
     <div class="reader-badge">BTB READER · ${esc(readerMode)}</div>
-    ${localized(issue,'anchor_reason')?`<div class="starting-note"><div class="label">WHY THIS STARTING POINT</div><p>${esc(localized(issue,'anchor_reason'))}</p></div>`:''}
+    ${localized(issue,'anchor_reason')?`<div class="starting-note"><div class="label">WHY THIS ARTICLE</div><p>${esc(localized(issue,'anchor_reason'))}</p></div>`:''}
 
     <div class="article-brief">
       ${block('WHAT HAPPENED',whatBody)}
@@ -406,11 +406,11 @@ function renderOriginal(a,issue){
 
 function renderStartingArticlePending(issue){
   const status=issue?.anchor_status||'';
-  const detail=status==='pending_more_reader'
-    ? (contentLanguage==='ko'?'비교할 수 있는 Reader 기사들이 더 쌓이면 시작 기사가 정해집니다.':'The starting article will be selected after more Reader-processed coverage is available for comparison.')
-    : (contentLanguage==='ko'?'Reader와 기사 선택 과정이 아직 진행 중입니다.':'Reader processing and starting-article selection are still in progress.');
-  return `<div class="section-label"><span>01 · ARTICLE BRIEF</span><span>STARTING POINT</span></div>
-  <div class="pipeline-pending"><b>${contentLanguage==='ko'?'기사를 준비 중입니다.':'Preparing the starting article.'}</b>${esc(detail)}</div>`;
+  const detail=contentLanguage==='ko'
+    ? 'Reader가 오늘의 기사들을 분석하고 있습니다.'
+    : 'Reader is analyzing today’s coverage.';
+  return `<div class="section-label"><span>01 · ARTICLE BRIEF</span><span>BTB READER</span></div>
+  <div class="pipeline-pending"><b>${contentLanguage==='ko'?'기사를 준비 중입니다.':'Preparing the article.'}</b>${esc(detail)}</div>`;
 }
 
 function renderOtherFrames(arts,anchorArticleId){
