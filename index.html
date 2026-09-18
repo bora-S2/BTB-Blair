@@ -420,7 +420,7 @@ function renderOtherFrames(arts,anchorArticleId){
     .slice(0,6);
 
   const intro=contentLanguage==='ko'
-    ? '같은 이슈를 다른 보도가 어디에 초점을 두고 설명하는지 비교합니다. 각 카드는 정답이 아니라, 보도에서 전면에 놓인 질문과 맥락을 보여줍니다.'
+    ? '같은 이슈를 다른 보도에서는 어디에 초점을 두고 설명하는지 비교합니다. 정답은 없습니다.'
     : 'Compare what other reporting foregrounds in the same issue. Each card shows a different emphasis in the coverage, not a verdict on which frame is correct.';
 
   const cards=candidates.length
@@ -437,7 +437,7 @@ function renderOtherFrames(arts,anchorArticleId){
 
   return `<div class="section-label"><span>02 · OTHER FRAMES IN TODAY’S COVERAGE</span><span>${candidates.length} ${contentLanguage==='ko'?'개의 다른 읽기':'other reads'}</span></div>
   <section class="frames-wrap">
-    <div class="frames-head"><div><div class="kicker">SEEN DIFFERENTLY</div><h3>${contentLanguage==='ko'?'같은 사건은 어디에서 다르게 보이는가':'Where does the same story look different?'}</h3></div><p>${esc(intro)}</p></div>
+    <div class="frames-head"><div><div class="kicker">SEEN DIFFERENTLY</div><h3>${contentLanguage==='ko'?'같은 사건을 다르게 보는 기사들':'Where does the same story look different?'}</h3></div><p>${esc(intro)}</p></div>
     <div class="frames-grid">${cards}</div>
   </section>`;
 }
