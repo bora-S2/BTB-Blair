@@ -253,6 +253,8 @@ function renderIssue(d){
   const issue=d.issue, arts=d.articles, agents=d.agents, debate=d.debate;
   const root=document.querySelector('#btb .btb');
   const regularAgents=agents.filter(a=>!a.blind_spot);
+  const findDebateAgent=ref=>regularAgents.find(a=>[a.agent_key,a.agent_name,a.agent_name_en].includes(ref));
+  const linkedDebate=debate.filter(x=>findDebateAgent(x.from_agent)&&findDebateAgent(x.to_agent));
   const sourceNames=[...new Set(arts.map(a=>a.source).filter(Boolean))];
   const anchorArticle=issue.anchor_article_id
     ? arts.find(a=>a.id===issue.anchor_article_id)
@@ -317,10 +319,10 @@ function renderIssue(d){
   <div class="debate-panel">
     <div class="debate-head">
       <div><div class="kicker">DEBATE</div><h3>${contentLanguage==='ko'?'논리가 부딪히는 지점':'Where the arguments collide'}</h3></div>
-      <span>${debate.length} EXCHANGES</span>
+      <span>${linkedDebate.length} EXCHANGES</span>
     </div>
     <div class="debate-grid">
-      ${debate.map(x=>`<div class="line"><b>${esc(localized(x,'from_agent'))} → ${esc(localized(x,'to_agent'))}</b>${esc(localized(x,'text'))}</div>`).join('') || `<div class="line">${contentLanguage==='ko'?'토론 데이터가 없습니다.':'No debate data yet.'}</div>`}
+      ${linkedDebate.map(x=>`<div class="line"><b>${esc(localized(findDebateAgent(x.from_agent),'agent_name'))} → ${esc(localized(findDebateAgent(x.to_agent),'agent_name'))}</b>${esc(localized(x,'text'))}</div>`).join('') || `<div class="line">${contentLanguage==='ko'?'현재 Agent에 맞는 토론을 준비 중입니다.':'A debate for the current agents is being prepared.'}</div>`}
     </div>
   </div>
 
