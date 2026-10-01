@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- BTB Frontend v0.7.1 · Reader V1 + original source metadata -->
+<!-- BTB Frontend v0.8 · Archive search -->
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BREAKING THE BUBBLE</title>
 <style>
@@ -81,9 +81,10 @@
 .perspective-cards .agent-card .next-read-title{margin-top:10px}
 @media(max-width:800px){.original-article{padding:26px 22px}.brief-block{grid-template-columns:1fr;gap:8px}.brief-block.key-brief,.brief-block.limit-brief{margin:0;padding:24px 16px}.original-article h3{font-size:32px}.perspective-map,.reflection,.frames-head{grid-template-columns:1fr}.map-grid,.debate-grid,.frames-grid{grid-template-columns:1fr}.debate-head{align-items:flex-start;flex-direction:column}.section-label{align-items:flex-start;gap:7px;flex-direction:column}.original-source-row,.compact-source-row{align-items:flex-start;flex-direction:column}.original-source-row .sourcebtn{margin-top:4px}}
 @media(max-width:800px){.perspective-cards{grid-template-columns:1fr}}
+.archive-page{padding:58px 0 110px}.archive-heading{border-bottom:1px solid var(--ink);padding-bottom:35px}.archive-heading h1{font-family:"Playfair Display",serif;font-size:clamp(56px,8vw,105px);line-height:1;margin:0;font-weight:500;letter-spacing:-.055em}.archive-heading p{color:var(--muted);font-size:13px}.archive-filters{background:#fff;border:1px solid var(--line);padding:26px;margin:30px 0}.archive-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.archive-fields label{font-size:10px;font-weight:700;letter-spacing:.1em;color:#5d6570}.archive-fields input,.archive-fields select{display:block;width:100%;margin-top:8px;border:1px solid var(--line);background:#fafaf8;color:var(--ink);padding:12px;font:inherit;font-size:12px;min-height:42px}.archive-actions{display:flex;gap:18px;align-items:center;margin-top:23px}.archive-actions button,.archive-more button{border:0;background:none;cursor:pointer;font-size:11px;letter-spacing:.06em}.archive-actions .archive-submit{background:var(--navy);color:#fff;padding:14px 20px}.archive-status{font-size:12px;color:var(--muted);margin:25px 0}.archive-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.archive-card{border:1px solid var(--line);background:#fff;padding:27px;cursor:pointer;text-align:left;width:100%;color:var(--ink);display:flex;flex-direction:column;min-height:260px}.archive-card:hover{border-color:#8995a3}.archive-card h2{font:500 26px/1.2 "Playfair Display",serif;margin:18px 0 12px}.archive-card p{font-size:12px;line-height:1.65;color:#5c626c;margin:0 0 20px}.archive-card .meta{margin-top:auto;gap:10px;flex-wrap:wrap}.archive-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.archive-tags span{font-size:9px;border:1px solid var(--line);padding:5px 7px;color:#59616b}.archive-more{text-align:center;margin-top:25px}.archive-more button{border:1px solid var(--ink);padding:13px 24px}@media(max-width:850px){.archive-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.archive-results{grid-template-columns:1fr}}@media(max-width:560px){.archive-fields{grid-template-columns:1fr}.navlinks{gap:8px;font-size:10px}.brand span{display:none}.nav{height:auto;min-height:65px;gap:10px}.archive-actions{flex-wrap:wrap}}
 </style></head>
 <body>
-<header class="top"><div class="wrap nav"><div class="brand">BTB <span>/ BREAKING THE BUBBLE</span></div><div class="navlinks"><button onclick="home()">TODAY</button><button onclick="alert('MY BTB는 다음 단계에서 연결합니다.')">MY BTB</button><button onclick="alert('SEARCH는 다음 단계에서 연결합니다.')">SEARCH</button><div class="lang-toggle" aria-label="Content language"><button id="langKo" type="button" onclick="setContentLanguage('ko')">한국어</button><button id="langEn" type="button" onclick="setContentLanguage('en')">English</button></div><button id="logoutBtn" class="hidden" onclick="logout()">LOG OUT</button></div></div></header>
+<header class="top"><div class="wrap nav"><div class="brand">BTB <span>/ BREAKING THE BUBBLE</span></div><div class="navlinks"><button onclick="home()">TODAY</button><button onclick="alert('MY BTB는 다음 단계에서 연결합니다.')">MY BTB</button><button onclick="openArchive()">ARCHIVE / SEARCH</button><div class="lang-toggle" aria-label="Content language"><button id="langKo" type="button" onclick="setContentLanguage('ko')">한국어</button><button id="langEn" type="button" onclick="setContentLanguage('en')">English</button></div><button id="logoutBtn" class="hidden" onclick="logout()">LOG OUT</button></div></div></header>
 <main id="home">
 <section class="hero"><div class="wrap"><div class="hero-grid"><div><div class="kicker">AI NEWS RECOMMENDATION · PERSPECTIVE</div><h1>BREAKING<br>THE<br>BUBBLE</h1></div><div class="hero-copy">내가 생각하지 못했던 것을 발견하기.<div class="hero-sub">하나의 이슈를 하나의 기사로 끝내지 않습니다.<br><b>같은 이슈도, 다른 관점에서는 다르게 보입니다.</b></div></div></div></div></section>
 <section class="wrap"><div class="section-head"><div><div class="kicker">WORLD / TODAY</div><h2>오늘의 이슈</h2></div><p id="issueDateLabel">LIVE · INTERNATIONAL</p></div>
@@ -93,6 +94,25 @@
 <article class="news small" onclick="btb()"><div><div class="tag">TECHNOLOGY</div><h3>AI 산업의 변화가 각국에 미치는 영향</h3><p>기업의 혁신과 규제, 노동시장과 소비자의 이해가 교차합니다.</p></div><div class="meta"><span>TECH</span><span>08 MIN</span></div></article>
 </div><div class="thesis"><strong>BTB PRINCIPLE</strong><blockquote>“What I’m seeing may not be the whole story.”</blockquote></div></section>
 </main>
+<main id="archive" class="hidden"><section class="wrap archive-page">
+  <div class="archive-heading"><div class="kicker">BTB / ARCHIVE</div><h1>Archive</h1><p>Completed issues, organized for reading again.</p></div>
+  <form id="archiveForm" class="archive-filters" onsubmit="searchArchive(event)">
+    <div class="archive-fields">
+      <label>ISSUE TITLE<input name="title" type="search" placeholder="Search issue or article titles"></label>
+      <label>CONTENT<input name="content" type="search" placeholder="Search questions, summaries and Briefs"></label>
+      <label>CATEGORY<select name="category"><option value="">All categories</option></select></label>
+      <label>TOPIC<select name="topic"><option value="">All topics</option></select></label>
+      <label>REGION<select name="region"><option value="">All regions</option></select></label>
+      <label>ARTICLE PUBLISHED FROM<input name="published_from" type="date"></label>
+      <label>ARTICLE PUBLISHED TO<input name="published_to" type="date"></label>
+      <label>ISSUE FROM<input name="issue_from" type="date"></label>
+      <label>ISSUE TO<input name="issue_to" type="date"></label>
+    </div>
+    <div class="archive-actions"><button class="archive-submit" type="submit">SEARCH ARCHIVE →</button><button type="button" onclick="resetArchive()">CLEAR FILTERS</button></div>
+  </form>
+  <div class="archive-status" id="archiveStatus" role="status"></div><div id="archiveResults" class="archive-results"></div>
+  <div class="archive-more"><button id="archiveMore" class="hidden" onclick="loadArchive(true)">LOAD MORE →</button></div>
+</section></main>
 <main id="btb" class="hidden"><section class="wrap btb"></section></main>
 <footer class="wrap footer"><div><span>BREAKING THE BUBBLE</span><br><span>© Blair Bora Kang</span><br><a href="mailto:blairborakang@gmail.com">blairborakang@gmail.com</a></div><span>One story is never the whole story.</span></footer>
 
@@ -116,6 +136,12 @@
 const SUPABASE_URL = "https://kourzoumxgeggejyqekj.supabase.co";
 const SUPABASE_KEY = "sb_publishable_RFTkbsfGNrLBHW8a7iEFpg_nEEvL4lt";
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+let issueReturnView='home';
+let archiveFacets=[];
+let archiveRows=[];
+let archiveOffset=0;
+let archiveTotal=0;
+let archiveRequest=0;
 let selectedFeedback = '';
 let currentIssue = null;
 let latestIssues = [];
@@ -180,6 +206,7 @@ function setContentLanguage(lang){
   if(!document.getElementById('home').classList.contains('hidden')){
     renderIssueGrid();
   }
+  if(!document.getElementById('archive').classList.contains('hidden')){renderArchiveFacetOptions();renderArchiveResults();}
   if(currentIssue && !document.getElementById('btb').classList.contains('hidden')){
     renderIssue(currentIssue);
   }
@@ -248,10 +275,11 @@ async function openIssue(issueId){
     supabaseClient.from('btb_debate').select('*').eq('issue_id',issueId).order('created_at',{ascending:true})
   ]);
   if(!issue) return;
+  issueReturnView=document.getElementById('archive').classList.contains('hidden')?'home':'archive';
   currentIssue={issue,articles:articles||[],agents:agents||[],debate:debate||[]};
   renderIssue(currentIssue);
   document.getElementById('loginModal').classList.add('hidden');
-  document.getElementById('home').classList.add('hidden');document.getElementById('btb').classList.remove('hidden');scrollTo(0,0);
+  document.getElementById('home').classList.add('hidden');document.getElementById('archive').classList.add('hidden');document.getElementById('btb').classList.remove('hidden');scrollTo(0,0);
 }
 function renderIssue(d){
   const issue=d.issue, arts=d.articles, agents=d.agents, debate=d.debate;
@@ -271,7 +299,7 @@ function renderIssue(d){
     ? '이 이슈에서 실제로 충돌하는 이해관계는 무엇인가?'
     : 'Which interests and assumptions are actually in tension here?';
 
-  root.innerHTML=`<button class="back" onclick="home()">← TODAY</button>
+  root.innerHTML=`<button class="back" onclick="returnFromIssue()">← ${issueReturnView==='archive'?'ARCHIVE':'TODAY'}</button>
   <div class="issue-top">
     <div>
       <div class="kicker">BTB · ${esc((issue.issue_date||'').replaceAll('-','.'))}</div>
@@ -521,6 +549,67 @@ function renderBlind(a,sectionNumber='05'){
   </div>`;
 }
 function openBTB(){loadIssues();}
+function returnFromIssue(){if(issueReturnView==='archive') openArchive();else home();}
+function archiveText(ko,en){return contentLanguage==='ko'?ko:en;}
+function renderArchiveFacetOptions(){
+  const form=document.getElementById('archiveForm');
+  if(!form) return;
+  for(const [field,type,all] of [['category','category','All categories'],['topic','topic','All topics'],['region','region','All regions']]){
+    const select=form.elements[field],selected=select.value;
+    select.innerHTML=`<option value="">${all}</option>`+archiveFacets.filter(f=>f.facet_type===type).sort((a,b)=>a.display_order-b.display_order).map(f=>`<option value="${esc(f.facet_key)}">${esc(contentLanguage==='ko'?f.label_ko:f.label_en)}</option>`).join('');
+    select.value=selected;
+  }
+}
+async function openArchive(){
+  const {data:{session}}=await supabaseClient.auth.getSession();
+  if(!session){showLogin();return;}
+  document.getElementById('home').classList.add('hidden');
+  document.getElementById('btb').classList.add('hidden');
+  document.getElementById('archive').classList.remove('hidden');
+  scrollTo(0,0);
+  if(!archiveFacets.length){
+    const {data,error}=await supabaseClient.from('btb_archive_facets').select('facet_type,facet_key,label_en,label_ko,display_order').order('display_order');
+    if(error) console.error('Archive facets:',error); else archiveFacets=data||[];
+  }
+  renderArchiveFacetOptions();
+  if(!archiveRows.length) await loadArchive(false);else renderArchiveResults();
+}
+function searchArchive(event){event.preventDefault();loadArchive(false);}
+function resetArchive(){document.getElementById('archiveForm').reset();loadArchive(false);}
+function archiveParams(){
+  const f=document.getElementById('archiveForm').elements;
+  const val=name=>f[name].value.trim()||null;
+  return {p_title_query:val('title'),p_content_query:val('content'),p_published_from:val('published_from'),p_published_to:val('published_to'),p_category:val('category'),p_topic:val('topic'),p_region:val('region'),p_issue_from:val('issue_from'),p_issue_to:val('issue_to')};
+}
+async function loadArchive(more=false){
+  const request=++archiveRequest,offset=more?archiveOffset:0;
+  const status=document.getElementById('archiveStatus');
+  status.textContent=archiveText('검색 중입니다…','Searching…');
+  document.getElementById('archiveMore').classList.add('hidden');
+  const {data,error}=await supabaseClient.rpc('btb_archive_search',{...archiveParams(),p_limit:20,p_offset:offset});
+  if(request!==archiveRequest) return;
+  if(error){console.error('Archive search:',error);status.textContent=archiveText('검색 오류: ','Search error: ')+(error.message||'');return;}
+  if(!more) archiveRows=[];
+  archiveRows.push(...(data||[]));
+  archiveOffset=offset+(data||[]).length;
+  archiveTotal=Number(data?.[0]?.total_matches||(!more?0:archiveTotal));
+  renderArchiveResults();
+}
+function archiveFacetLabels(row){
+  const keys=[...(row.categories||[]),...(row.topics||[]),...(row.regions||[])];
+  return keys.map(k=>archiveFacets.find(f=>f.facet_key===k)).filter(Boolean).map(f=>contentLanguage==='ko'?f.label_ko:f.label_en);
+}
+function renderArchiveResults(){
+  const status=document.getElementById('archiveStatus'),root=document.getElementById('archiveResults');
+  status.textContent=archiveRows.length?`${archiveTotal} ISSUES · ${archiveRows.length} SHOWN`:archiveText('검색 결과가 없습니다.','No matching issues.');
+  root.innerHTML=archiveRows.map(row=>{
+    const dates=row.earliest_published_date?(row.earliest_published_date===row.latest_published_date?row.earliest_published_date:`${row.earliest_published_date} – ${row.latest_published_date}`):archiveText('발행일 미확인','Publication date unavailable');
+    const partial=Number(row.partial_article_count||0);
+    return `<button type="button" class="archive-card" onclick="btb('${esc(row.issue_id)}')"><div class="tag">ISSUE · ${esc(row.issue_date||'')}</div><h2>${esc(localized(row,'title'))}</h2><p>${esc(localized(row,'summary'))}</p><div class="archive-tags">${archiveFacetLabels(row).map(label=>`<span>${esc(label)}</span>`).join('')}</div><div class="meta"><span>${row.article_count} ARTICLES${partial?` · ${partial} PARTIAL`:''}</span><span>${esc(dates)}</span></div></button>`;
+  }).join('');
+  document.getElementById('archiveMore').classList.toggle('hidden',archiveOffset>=archiveTotal);
+}
+
 
 function showLogin(){
   document.getElementById('loginModal').classList.remove('hidden');
@@ -556,6 +645,7 @@ async function logout(){
   currentIssue=null;
   latestIssues=[];
   document.getElementById('btb').classList.add('hidden');
+  document.getElementById('archive').classList.add('hidden');
   document.getElementById('home').classList.remove('hidden');
   const grid=document.querySelector('.news-grid');
   if(grid) grid.innerHTML='';
@@ -564,6 +654,7 @@ async function logout(){
 
 function home(){
   document.getElementById('btb').classList.add('hidden');
+  document.getElementById('archive').classList.add('hidden');
   document.getElementById('home').classList.remove('hidden');
   scrollTo(0,0);
   loadIssues();
